@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Plus, Calendar, DollarSign, Trash2, Save, ArrowLeft } from 'lucide-react'
+import { Plus, Trash2, Save, ArrowLeft } from 'lucide-react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Navbar } from '../components/layout/Navbar'
 import { Button, Input } from '../components/common/UI'

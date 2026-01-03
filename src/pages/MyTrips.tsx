@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Search, Filter, Calendar, MapPin, Edit, Trash2, Eye, Plus } from 'lucide-react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Navbar } from '../components/layout/Navbar'
 import { Button } from '../components/common/UI'
 import { supabase } from '../services/supabase'
