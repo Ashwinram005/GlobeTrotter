@@ -22,7 +22,8 @@ export const Navbar: React.FC = () => {
                     <div className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
                         <Link to="/dashboard" className="hover:text-primary-600 transition-colors">Explore</Link>
                         <Link to="/my-trips" className="hover:text-primary-600 transition-colors">My Trips</Link>
-                        <Link to="/dashboard" className="hover:text-primary-600 transition-colors">Destinations</Link>
+                        <Link to="/cities" className="hover:text-primary-600 transition-colors">Cities</Link>
+                        <Link to="/activities" className="hover:text-primary-600 transition-colors">Activities</Link>
                     </div>
 
                     <div className="flex items-center gap-4 border-l border-slate-100 pl-6">

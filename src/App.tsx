@@ -4,7 +4,12 @@ import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import CreateTrip from './pages/CreateTrip'
 import MyTrips from './pages/MyTrips'
+import TripView from './pages/TripView'
 import TripItinerary from './pages/TripItinerary'
+import TripBudget from './pages/TripBudget'
+import TripCalendar from './pages/TripCalendar'
+import CitySearch from './pages/CitySearch'
+import ActivitySearch from './pages/ActivitySearch'
 import { useAuth } from './context/AuthContext'
 
 function App() {
@@ -19,7 +24,13 @@ function App() {
       <Route path="/dashboard" element={session ? <Dashboard /> : <Navigate to="/login" />} />
       <Route path="/create-trip" element={session ? <CreateTrip /> : <Navigate to="/login" />} />
       <Route path="/my-trips" element={session ? <MyTrips /> : <Navigate to="/login" />} />
-      <Route path="/trip/:tripId" element={session ? <TripItinerary /> : <Navigate to="/login" />} />
+      <Route path="/trip/:tripId" element={session ? <TripView /> : <Navigate to="/login" />} />
+      <Route path="/trip/:tripId/edit" element={session ? <TripItinerary /> : <Navigate to="/login" />} />
+      <Route path="/trip/:tripId/budget" element={session ? <TripBudget /> : <Navigate to="/login" />} />
+      <Route path="/trip/:tripId/calendar" element={session ? <TripCalendar /> : <Navigate to="/login" />} />
+      <Route path="/cities" element={session ? <CitySearch /> : <Navigate to="/login" />} />
+      <Route path="/activities" element={session ? <ActivitySearch /> : <Navigate to="/login" />} />
+      <Route path="/profile" element={session ? <Dashboard /> : <Navigate to="/login" />} />
       <Route path="/" element={<Navigate to="/dashboard" />} />
     </Routes>
   )
