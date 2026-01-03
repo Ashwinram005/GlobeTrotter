@@ -54,7 +54,7 @@ const AdminDashboard: React.FC = () => {
         const { data: userData } = await supabase
             .from('profiles')
             .select('*')
-            .order('created_at', { ascending: false })
+            .order('updated_at', { ascending: false })
             .limit(50)
 
         if (userData) setProfiles(userData)
