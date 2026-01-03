@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, MapPin, Edit, ArrowLeft, CalendarDays, DollarSign } from 'lucide-react'
+import { Calendar, MapPin, Edit, ArrowLeft, CalendarDays, DollarSign, Share2 } from 'lucide-react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Navbar } from '../components/layout/Navbar'
 import { Button } from '../components/common/UI'
@@ -157,6 +157,13 @@ const TripView: React.FC = () => {
                             className="rounded-2xl px-6"
                         >
                             <DollarSign className="w-5 h-5 mr-2" /> Budget
+                        </Button>
+                        <Button
+                            variant="outline"
+                            onClick={() => navigate(`/trip/${tripId}/public`)}
+                            className="rounded-2xl px-6"
+                        >
+                            <Share2 className="w-5 h-5 mr-2" /> Share
                         </Button>
                         <Button
                             onClick={() => navigate(`/trip/${tripId}/edit`)}

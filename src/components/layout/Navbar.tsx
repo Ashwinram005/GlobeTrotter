@@ -64,6 +64,14 @@ export const Navbar: React.FC = () => {
                                                 <p className="text-xs text-slate-500 truncate">{user?.email}</p>
                                             </div>
                                             <Link
+                                                to="/admin"
+                                                className="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 transition-colors text-slate-700"
+                                                onClick={() => setShowMenu(false)}
+                                            >
+                                                <div className="w-4 h-4 rounded bg-red-100 text-red-600 flex items-center justify-center font-bold text-[10px]">A</div>
+                                                <span className="text-sm font-medium">Admin Panel</span>
+                                            </Link>
+                                            <Link
                                                 to="/profile"
                                                 className="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 transition-colors text-slate-700"
                                                 onClick={() => setShowMenu(false)}

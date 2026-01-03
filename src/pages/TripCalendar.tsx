@@ -156,19 +156,17 @@ const TripCalendar: React.FC = () => {
                                                 {day.getDate()}
                                             </span>
 
-                                            {isInRange && (
-                                                <div className="mt-2 space-y-1 overflow-y-auto max-h-[80px] custom-scrollbar">
-                                                    {dateActivities.length > 0 ? (
-                                                        dateActivities.map((act: ItineraryItem) => (
-                                                            <div key={act.id} className="text-[10px] bg-primary-600 text-white p-1.5 rounded-lg truncate shadow-sm font-medium">
-                                                                {act.activity_name}
-                                                            </div>
-                                                        ))
-                                                    ) : (
-                                                        <div className="h-2 w-full bg-primary-100 rounded-full mt-2" title="Trip Day" />
-                                                    )}
-                                                </div>
-                                            )}
+                                            <div className="mt-2 space-y-1 overflow-y-auto max-h-[80px] custom-scrollbar">
+                                                {dateActivities.length > 0 ? (
+                                                    dateActivities.map((act: ItineraryItem) => (
+                                                        <div key={act.id} className="text-[10px] bg-primary-600 text-white p-1.5 rounded-lg truncate shadow-sm font-medium">
+                                                            {act.activity_name}
+                                                        </div>
+                                                    ))
+                                                ) : (
+                                                    isInRange && <div className="h-2 w-full bg-primary-100 rounded-full mt-2" title="Trip Day" />
+                                                )}
+                                            </div>
                                         </>
                                     )}
                                 </button>
